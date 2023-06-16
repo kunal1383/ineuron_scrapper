@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Search Courses</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Search</h1>
+
+    <div class="form">
+        <form action="/courses" method="POST">
+            <label for="course">Courses</label>
+            <select name="course">
+                <option value="data-science">Data Science</option>
+                <option value="big-data">Big Data</option>
+                <option value="data-analytics">Data Analytics</option>
+                <option value="web-developement">Web Developement</option>
+                <option value="mobile-developement">Mobile Developement</option>
+                <option value="blockchain">Block Chain</option>
+                <option value="programming">Programming</option>
+                <option value="cyber-security">Cyber Security</option>
+                <option value="testing">Testing</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="cloud">Cloud</option>
+                <option value="devops">DEVOPS</option>
+                <option value="iot">rpa</option>
+                <option value="ar-vr">AR VR</option>
+                <option value="salesforce">Salesforce</option>
+                <option value="data-structure">Data Structure</option>
+                <option value="system-design">System Design</option>
+                <option value="database">Database</option>
+                <option value="aptitude">Aptitude</option>
+                <option value="resume">Resume</option>
+                <option value="k12">K12</option>
+            </select>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+  
+{% endblock %}
